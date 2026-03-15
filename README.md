@@ -16,8 +16,8 @@ Dự án này triển khai mô hình **Linear Regression** hoàn toàn từ con 
 
 Kết quả so sánh trên bài toán [House Prices Competition](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) chứng minh sức mạnh của các thuật toán tối ưu hóa hiện đại:
 
-![kết quả của Gradient Decent](.assets/gra_learning_curve.png)
-![kết quả của Adam Optimizer](.assets/adam_learning_curve.png)
+![kết quả của Gradient Decent](assets/gra_learning_curve.png)
+![kết quả của Adam Optimizer](assets/adam_learning_curve.png)
 
 | Thuật toán | Tốc độ học ($\alpha$) | Số vòng lặp | Cost | Điểm Kaggle (RMSLE) |
 | :--- | :---: | :---: | :--- | :---|
@@ -95,8 +95,8 @@ $$
 python main.py
 ```
 ## Screenshots 📸
-![hình ảnh về bài nộp trên kaggle](.assets/submission.png)
-![](.assets/rank.png)
+![hình ảnh về bài nộp trên kaggle](assets/submission.png)
+![](assets/rank.png)
 ## 👨‍💻 Tác giả
 Lê Quang Vinh Sinh viên năm thứ nhất chuyên ngành Công nghệ thông tin Học viện Công nghệ Bưu chính Viễn thông (PTIT) Dự án được xây dựng nhằm nghiên cứu sâu về các thuật toán tối ưu hóa trong học máy cơ bản.
    
