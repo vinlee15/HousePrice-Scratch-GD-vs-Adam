@@ -1,6 +1,6 @@
 # 🏠 Dự đoán Giá nhà: So sánh Gradient Descent và Adam Optimizer (From Scratch)
 
-Dự án này triển khai mô hình **Linear Regression** hoàn toàn từ con số 0 bằng **NumPy** để dự đoán giá nhà từ bộ dữ liệu Kaggle nổi tiếng. Trọng tâm của dự án là phân tích thực nghiệm và so sánh hiệu suất giữa hai thuật toán tối ưu hóa: **Gradient Descent (GD)** truyền thống và **Adam Optimizer**.
+Dự án này triển khai mô hình **Linear Regression** hoàn toàn từ con số 0 bằng **NumPy** để dự đoán giá nhà từ bộ dữ liệu Kaggle nổi tiếng. Trọng tâm của dự án là phân tích thực nghiệm và nghiên cứu hiệu suất giữa hai thuật toán tối ưu hóa: **Gradient Descent (GD)** truyền thống và **Adam Optimizer**.
 
 ---
 
@@ -49,8 +49,9 @@ $$
 J(w, b) = \frac{1}{2m} \sum_{i=1}^{m} \left( \hat{y}^{(i)} - y^{(i)} \right)^2 + \frac{\lambda}{2m} \sum_{j=1}^{n} w_j^2
 $$
 
-$m$: Số lượng mẫu dữ liệu.
-$\lambda$: Hệ số chính quy hóa (Regularization parameter).
+Trong đó:
+* $m$: Số lượng mẫu dữ liệu.
+* $\lambda$: Hệ số chính quy hóa (Regularization parameter).
 
 ### 3. Thuật toán tối ưu hóa (Optimization)
 #### 3.1. Gradient Descent (GD) truyền thống
@@ -85,6 +86,12 @@ $$
 w_{t+1} = w_t - \alpha \frac{\hat{m}_t}{\sqrt{\hat{v}_t} + \epsilon}
 $$
 
+Trong đó:
+Trong đó:
+* $\alpha$: Tốc độ học (Learning Rate).
+* $\beta_1, \beta_2$: Các hệ số phân rã (thường là $0.9$ và $0.999$).
+* $\epsilon$: Số cực nhỏ để tránh lỗi chia cho 0 (thường là $10^{-8}$).
+  
 ## 🛠 Cài đặt và Sử dụng
 ### 1. Clone project:
    ```bash
