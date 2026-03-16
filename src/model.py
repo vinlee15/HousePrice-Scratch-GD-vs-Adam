@@ -37,13 +37,13 @@ def gradient_decent(w_in, b_in, x_train, y_real, alpha, num_iters, epsilon, lamb
         y_train = predict_price(x_train, w, b)
         cost = compute_cost(w, y_train, y_real, lambda_)
 
-        if t % 100 == 0:
-            print(f"Vòng {t:5}: Cost = {cost:.6f}")
-
         w_history.append(copy.deepcopy(w))
         cost_history.append(cost)
-
         diff = temp_cost - cost
+        temp_cost = cost
+
+        if t % 100 == 0:
+            print(f"Vòng {t:5}: Cost = {cost:.6f}")
 
         if 0 <= diff < epsilon:
             print(f"--- Thuật toán hội tụ tại vòng {t} Cost = {cost:.6f}")
@@ -52,8 +52,6 @@ def gradient_decent(w_in, b_in, x_train, y_real, alpha, num_iters, epsilon, lamb
         if diff < 0:
             print(f"Cảnh báo: Alpha quá cao! Cost tăng từ {temp_cost:.6f} lên {cost:.6f} tại vòng {t}")
             alpha /= 3
-
-        temp_cost = cost
     
     return w, b, w_history, cost_history
 
@@ -94,11 +92,11 @@ def adam_optimizer(w_in, b_in, x_train, y_real, alpha, num_iters, epsilon, lambd
 
         w_history.append(copy.deepcopy(w))
         cost_history.append(cost)
+        diff = temp_cost - cost
+        temp_cost = cost
 
         if t % 100 == 0:
             print(f"Vòng {t:5}: Cost = {cost:.6f}")
-    
-        diff = temp_cost - cost
 
         if 0 <= diff < epsilon:
             print(f"--- Thuật toán hội tụ tại vòng {t} Cost = {cost:.6f} ---")
@@ -106,8 +104,6 @@ def adam_optimizer(w_in, b_in, x_train, y_real, alpha, num_iters, epsilon, lambd
 
         if diff < 0:
             print(f"Cảnh báo: Alpha quá cao! Cost tăng từ {temp_cost:.6f} lên {cost:.6f} tại vòng {t}")
-            alpha /= 3
-
-        temp_cost = cost 
+            alpha /= 3 
 
     return w, b, w_history, cost_history
