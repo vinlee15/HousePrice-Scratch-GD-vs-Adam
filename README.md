@@ -105,7 +105,7 @@ Trong đó:
 ## 🛠 Cài đặt và Sử dụng
 ### 1. Clone project:
    ```bash
-   git clone https://github.com/vinlee15/HousePrice-Scratch-GD-vs-Adam
+   git clone https://github.com/vinlee15/Linear-Regression-Scratch-GD-Adam-Normal-Equation
    ```
 ### 2. Cài đặt thư viện:
    ```bash
@@ -119,9 +119,13 @@ python main.py
 - kết quả của 2 lần submit
 
 ![bài nộp trên kaggle](assets/submission.png)
+![](assets/submission1.png)
 - rank của bài tốt nhất (adam optimizer)
 
 ![rank trên kaggle](assets/rank.png)
 ## 👨‍💻 Tác giả
-Lê Quang Vinh Sinh viên năm thứ nhất chuyên ngành Công nghệ thông tin Học viện Công nghệ Bưu chính Viễn thông (PTIT) Dự án được xây dựng nhằm nghiên cứu sâu về các thuật toán tối ưu hóa trong học máy cơ bản.
-   
+**Lê Quang Vinh**
+
+- Sinh viên năm thứ nhất chuyên ngành Công nghệ thông tin – Học viện Công nghệ Bưu chính Viễn thông (PTIT).
+
+- Mục tiêu dự án: Nghiên cứu chuyên sâu về bản chất toán học và cơ chế vận hành của các thuật toán tối ưu hóa nền tảng trong Machine Learning.
