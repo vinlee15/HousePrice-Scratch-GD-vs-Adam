@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd 
-from src import preprocess_data,  gradient_decent, predict_price, adam_optimizer, save_learning_curve
+from src import preprocess_data,  gradient_decent, predict_price, adam_optimizer, save_learning_curve, normal_equation
 
 def main():
     epsilon = 1e-7
@@ -14,8 +14,9 @@ def main():
     print("\nCHỌN THUẬT TOÁN TỐI ƯU:")
     print("0) Gradient Descent (Truyền thống)")
     print("1) Adam Optimizer (Nâng cao)")
+    print("2) Normal Equation (OLS)")
     
-    choice = input("Nhập lựa chọn của bạn (0/1): ")
+    choice = input("Nhập lựa chọn của bạn (0/1/2): ")
 
     if choice == "0":
         alpha=0.06
@@ -27,6 +28,8 @@ def main():
         print(f"Đang chạy Adam Optimizer với alpha={alpha}...")
         w_final, b_final, w_history, cost_history = adam_optimizer(w, b, x_train, y_real, alpha, num_iters, epsilon, lambda_)
         save_learning_curve(cost_history, w_history, title="Adam Optimizer")
+    elif choice == "2":
+        w_final, b_final = normal_equation(x_train, y_real, lambda_)
     else:
         print("Lựa chọn không hợp lệ. Thoát chương trình.")
         return
