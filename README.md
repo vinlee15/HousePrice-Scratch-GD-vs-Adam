@@ -15,9 +15,9 @@ Dự án này triển khai mô hình **Linear Regression** hoàn toàn từ con 
 
 Kết quả so sánh trên bài toán [House Prices Competition](https://www.kaggle.com/c/house-prices-advanced-regression-techniques) chứng minh sức mạnh của các thuật toán tối ưu hóa hiện đại:
 
-- kết quả của Gradient Decent
+- kết quả của Gradient Descent
 
-![kết quả của Gradient Decent](assets/gra_learning_curve.png)
+![kết quả của Gradient Descent](assets/gra_learning_curve.png)
 - kết quả của Adam Optimizer
 
 ![kết quả của Adam Optimizer](assets/adam_learning_curve.png)
@@ -95,7 +95,7 @@ Trong đó:
 Tìm trực tiếp điểm cực tiểu của hàm mất mát bằng đại số tuyến tính mà không cần vòng lặp:
 
 $$
-\theta = (\mathbf{X}^T \mathbf{X} + \lambda \mathbf{L})^{-1} \mathbf{X}^T \mathbf{y}
+w = (\mathbf{X}^T \mathbf{X} + \lambda \mathbf{L})^{-1} \mathbf{X}^T \mathbf{y}
 $$
 
 Trong đó: 
